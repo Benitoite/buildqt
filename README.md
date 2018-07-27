@@ -1,2 +1,2 @@
 # buildqt
-Builds qt from release tarball.
+* Builds qt5.11.1 from `qt.io` official release tarball.
