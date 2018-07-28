@@ -4,7 +4,7 @@ FROM ubuntu:latest
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y curl xz-utils gnupg
 
-RUN apt-key update && mkdir ~/qt-inst && cd ~/qt-inst && curl -i 'https://mirrors.ocf.berkeley.edu/qt/archive/qt/5.11/5.11.1/single/qt-everywhere-src-5.11.1.tar.xz' -O 'qt-everywhere-src-5.11.1.tar.xz' && md5sum qt-everywhere-src-5.11.1.tar.xz
+RUN apt-key update && mkdir ~/qt-inst && cd ~/qt-inst && curl -i 'https://mirrors.ocf.berkeley.edu/qt/archive/qt/5.11/5.11.1/single/qt-everywhere-src-5.11.1.tar.xz' -o 'qt-everywhere-src-5.11.1.tar.xz' && md5sum qt-everywhere-src-5.11.1.tar.xz
 
 RUN mkdir ~/qt-source && cd ~/qt-source && tar xvf ~/qt-inst/qt-everywhere-src-5.11.1.tar.xz
 
