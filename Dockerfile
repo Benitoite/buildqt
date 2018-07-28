@@ -1,4 +1,11 @@
-FROM ubuntu:latest
+FROM ubuntu:18.04
+
+# PREPARE THE ENVIRONMENT
+
+RUN rm /bin/sh && ln -s /bin/bash /bin/sh
+
+ENV LC_ALL C.UTF-8
+ENV LANG C.UTF-8
 
 # DOWNLOAD THE CODE AND DEPENDENCIES
 
@@ -14,7 +21,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y bison bu
 
 # CONFIGURE THE BUILD SYSTEM
 
-# RUN mkdir ~/qt-build && cd ~/qt-build && ~/qt/configure -release -nomake tests -nomake examples -confirm-license -prefix /opt/local/Qt -opensource
+# RUN mkdir ~/qt-build && cd ~/qt-build && ~/qt/configure -developer-build -nomake tests -nomake examples -confirm-license -prefix /opt/local/Qt -opensource
 
 # COMPILE AND INSTALL SOFTWARE
 
