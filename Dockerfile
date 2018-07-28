@@ -9,7 +9,7 @@ ENV LANG C.UTF-8
 
 # DOWNLOAD THE CODE AND DEPENDENCIES
 
-RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y curl xz-utils && apt-get clean
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y apt-utils curl xz-utils && apt-get clean
 
 RUN mkdir ~/qt-inst && cd ~/qt-inst && curl 'https://mirrors.ocf.berkeley.edu/qt/archive/qt/5.11/5.11.1/single/qt-everywhere-src-5.11.1.tar.xz' -o 'qt-everywhere-src-5.11.1.tar.xz' && md5sum qt-everywhere-src-5.11.1.tar.xz && mkdir ~/qt-source && cd ~/qt-source && tar xf ~/qt-inst/qt-everywhere-src-5.11.1.tar.xz && mv ~/qt-source/qt-everywhere-src-5.11.1 ~/qt && rm ~/qt-inst/qt-everywhere-src-5.11.1.tar.xz
 
