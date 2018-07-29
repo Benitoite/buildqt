@@ -21,7 +21,7 @@ RUN mkdir ~/qt-build && cd ~/qt-build && ~/qt/configure -release -nomake tests -
 
 # COMPILE AND INSTALL SOFTWARE
 
-RUN make -j2 && make install
+RUN make -j2 all && make install
 
 # SET ENTRYPOINT COMMAND
 
