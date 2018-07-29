@@ -17,7 +17,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y bison bu
 
 # CONFIGURE THE BUILD SYSTEM
 
-RUN mkdir ~/qt-build && cd ~/qt-build && ~/qt/configure -release -nomake tests -nomake examples -confirm-license -prefix /opt/local/Qt -opensource -no-gtkstyle
+RUN mkdir ~/qt-build && cd ~/qt-build && ~/qt/configure -release -nomake tests -nomake examples -confirm-license -prefix /opt/local/Qt -opensource
 
 # COMPILE AND INSTALL SOFTWARE
 
