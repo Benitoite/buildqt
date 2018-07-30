@@ -9,7 +9,7 @@ ENV LANG C.UTF-8
 
 ENV QTDIR /opt/local/Qt
 ENV PATH $QTDIR/bin:$PATH
-RUN mkdir ~/qt-build && cd ~/qt-build && ~/qt/configure -release -nomake tests -nomake examples -confirm-license -prefix /opt/local/Qt -opensource
+RUN cd ~/qt-build && ~/qt/configure -release -nomake tests -nomake examples -confirm-license -prefix /opt/local/Qt -opensource
 
 # COMPILE AND INSTALL SOFTWARE
 
