@@ -1,4 +1,4 @@
-FROM kd6kxr/buildqtbase
+FROM kd6kxr/buildqtbase:base1
 
 # PREPARE THE ENVIRONMENT
 
