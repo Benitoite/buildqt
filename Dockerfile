@@ -9,11 +9,11 @@ ENV LANG C.UTF-8
 
 ENV QTDIR /opt/local/Qt
 ENV PATH $QTDIR/bin:$PATH
-RUN cd ~/qt-build && ~/qt/configure -skip qtbase -release -nomake tests -nomake examples -confirm-license -prefix /opt/local/Qt -opensource
+RUN mkdir ~/qt-build/qtwebengine && cd ~/qt-build/qtwebengine && ~/qt/qtwebengine configure -release -nomake tests -nomake examples -confirm-license -prefix /opt/local/Qt -opensource
 
 # COMPILE AND INSTALL SOFTWARE
 
-RUN cd ~/qt-build && make -j2 && make install
+RUN cd ~/qt-build/qtwebengine && make -j4 && make install
 
 # SET ENTRYPOINT COMMAND
 
