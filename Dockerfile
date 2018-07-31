@@ -5,6 +5,10 @@ FROM kd6kxr/buildqtbase
 ENV LC_ALL C.UTF-8
 ENV LANG C.UTF-8
 
+# GET A DEPENDENCY
+
+RUN apt-get update && apt-get install libdbus-1-dev && apt-get clean
+
 # CONFIGURE THE BUILD SYSTEM
 
 ENV QTDIR /opt/local/Qt
