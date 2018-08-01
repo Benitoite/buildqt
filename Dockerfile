@@ -17,11 +17,11 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y bison bu
 
 # CONFIGURE THE BUILD SYSTEM
 
-RUN mkdir ~/qt-build && cd ~/qt-build && ~/qt/configure -release -nomake tests -nomake examples -confirm-license -prefix /opt/local/Qt -opensource -platform linux-g++-64
+RUN mkdir ~/qt-build && cd ~/qt-build && ~/qt/configure -release -nomake tests -nomake examples -confirm-license -prefix /opt/local/Qt -opensource -platform linux-g++-64 -skip qt3d -skip qtandroidextras -skip qtcanvas3d -skip qtcharts -skip qtconnectivity -skip qtdatavis3d -skip qtdeclarative -skip qtdoc -skip qtgamepad -skip qtgraphicaleffects -skip qtimageformats -skip qtlocation -skip qtmacextras -skip qtmultimedia -skip qtnetworkauth -skip qtpurchasing -skip qtquickcontrols -skip qtquickcontrols2 -skip qtscript -skip qtscxml -skip qtsensors -skip qtserialbus -skip qtserialport -skip qtspeech -skip qtsvg -skip qttools -skip qttranslations -skip qtvirtualkeyboard -skip qtwayland -skip qtwebchannel -skip qtwebengine -skip qtwebsockets -skip qtwebview -skip qtwinextras -skip qtx11extras -skip qtxmlpatterns
 
 # COMPILE AND INSTALL SOFTWARE
 
-RUN cd ~/qt-build/qtbase && make -j4 && make install
+RUN cd ~/qt-build && make -j4 && make install
 
 # SET ENTRYPOINT COMMAND
 
