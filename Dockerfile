@@ -13,7 +13,7 @@ ENV PATH $QTDIR/bin:$PATH
 # COMPILE AND INSTALL SOFTWARE
 RUN cd ~/qt/qtdeclarative && qmake && make -j2 && make install 
 RUN cd ~/qt/qtwebchannel && qmake && make -j2 && make install 
-RUN cd ~/qt/qtwebengine && qmake && make -j2 && make install 
+RUN cd ~/qt/qtwebengine && qmake && timeout 45m make -j2 ; exit 0
 
 # SET ENTRYPOINT COMMAND
 
