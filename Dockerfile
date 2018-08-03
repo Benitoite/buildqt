@@ -1,4 +1,4 @@
-FROM kd6kxr/buildqtweb1:web1
+FROM kd6kxr/buildqtweb1:buildqtweb1
 
 # PREPARE THE ENVIRONMENT
 
