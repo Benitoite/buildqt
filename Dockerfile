@@ -13,6 +13,7 @@ ENV PATH $QTDIR/bin:$PATH
 # COMPILE AND INSTALL SOFTWARE
 
 RUN cd ~/qt/qtsvg && qmake && make -j2 && make install
+RUN cd ~/qt/qttranslations && qmake && make -j2 && make install
 
 # SET ENTRYPOINT COMMAND
 
