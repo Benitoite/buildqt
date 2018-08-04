@@ -1,4 +1,4 @@
-FROM kd6kxr/buildqtweb:buildqtweb
+FROM kd6kxr/buildqtsvg:buildqtsvg
 
 # PREPARE THE ENVIRONMENT
 
